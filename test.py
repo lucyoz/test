@@ -4,8 +4,8 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.keys import Keys
 
 # ChromeDriver 경로 설정
-chromedriver_path = "C:\\chromedriver\\chromedriver-win64\\chromedriver.exe"
-s = Service("C:\\chromedriver\\chromedriver-win64\\chromedriver.exe")
+#chromedriver_path = "C:\\chromedriver\\chromedriver-win64\\chromedriver.exe"
+s = Service("/sw/chromedriver_linux64/chromedriver.exe")
 
 # Chrome WebDriver 인스턴스 생성
 #driver = webdriver.Chrome(chromedriver_path)
