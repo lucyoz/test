@@ -8,6 +8,11 @@ from selenium.webdriver.chrome.options import Options
 # Chrome WebDriver 인스턴스 생성 - 
 #driver = webdriver.Chrome(ChromeDriverManager().install())
 options = Options()
+options.add_argument("--headless")      # GUI 없이 실행
+options.add_argument("--no-sandbox")    # Sandbox 모드 비활성화
+options.add_argument("--disable-dev-shm-usage") # /dev/shm 파티션 사용 안함
+options.add_argument("--disable-gpu")   # GPU 가속 비활성화, headless 모드에서 권장
+
 driver = webdriver.Chrome(
     service=Service(ChromeDriverManager().install()), options=options)
 
