@@ -24,7 +24,7 @@ def setup():
     yield driver
     driver.quit()
     
-@pytest.mark.description("google 홈에서 상단 gmail 메뉴 클릭")
+# google 홈에서 상단 gmail 메뉴 클릭
 def test_link_to_gmail(setup):
     setup.get("https://www.google.com/")
     gmail_link = setup.find_element(By.XPATH, '//a[text()="Gmail"]')
@@ -44,7 +44,7 @@ def test_link_to_gmail(setup):
     except Exception as exc:
         print(f"Exception: Gmail page failed to load: {exc}")
             
-@pytest.mark.description("google 홈에서 상단 이미지 메뉴 클릭")      
+# google 홈에서 상단 이미지 메뉴 클릭
 def test_doodles(setup):
     setup.get("https://www.google.com/")
     images_link = setup.find_element(By.XPATH, '//a[text()="이미지"]')
